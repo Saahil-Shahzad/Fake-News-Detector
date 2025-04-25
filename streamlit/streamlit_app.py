@@ -21,7 +21,7 @@ with open(model_path, "rb") as f:
     model = pickle.load(f)
 
 # loading the tf-idf vectorizer used during model training
-vectorizer_path = os.path.join(base_path, "tfidf_vectorizer.pkl")
+vectorizer_path = os.path.join(os.path.dirname(__file__), "tfidf_vectorizer.pkl")
 with open(vectorizer_path, "rb") as f:
     vectorizer = pickle.load(f)
 
