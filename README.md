@@ -28,7 +28,7 @@ pip install streamlit pandas numpy nltk scikit-learn matplotlib seaborn
 **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/fake-news-detector.git
+git clone https://github.com/Saahil-Shahzad/Fake-News-Detector.git
 cd fake-news-detector
 ```
 
@@ -69,4 +69,4 @@ NLP tools from NLTK
 
 ML using Scikit-learn
 
-Feel free to fork, contribute, or give feedback!
+### Feel free to fork, contribute, or give feedback!
