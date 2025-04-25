@@ -6,6 +6,7 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+import os
 
 # downloading required nltk resources
 try:
@@ -15,10 +16,14 @@ except LookupError:
     nltk.download('punkt')
 
 # loading the trained logistic regression model
-model = pickle.load(open("logreg_model.pkl", "rb"))
+model_path = os.path.join(os.path.dirname(__file__), "logreg_model.pkl")
+with open(model_path, "rb") as f:
+    model = pickle.load(f)
 
 # loading the tf-idf vectorizer used during model training
-vectorizer = pickle.load(open("tfidf_vectorizer.pkl", "rb"))
+vectorizer_path = os.path.join(base_path, "tfidf_vectorizer.pkl")
+with open(vectorizer_path, "rb") as f:
+    vectorizer = pickle.load(f)
 
 # defining a function to preprocess the input text
 def preprocess_text(text):
